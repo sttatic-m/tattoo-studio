@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --gray: #f6f6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/main-bg.jpg") no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    padding: 25px;
+}
+
+.menu ul li:hover {
+    cursor: pointer;
+    color: var(--gray);
+}
+
+main div.content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 85vh;
+    padding: 10vw;
+}
+
+main div.content p.pre-title {
+    font-size: 1.8em;
+    font-family: 'Cinzel', sans-serif;
+}
+
+main div.content h1.title {
+    font-size: 4.8em;
+}
+
+main div.content p.subtitle{
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+main div.content p.subtitle span {
+    display: inline-block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a.contact-btn {
+    font-size: 1.8em;
+    background-color: #CC3333;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+a.contact-btn:hover {
+    color: var(--gray);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+section h2 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/*SEÇÃO DE PROJETOS */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+div.project-tile {
+    position: relative;
+    cursor: pointer;
+    max-width: 275px;
+    width: 100%;
+    height: 275px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, .2);
+    transition: ease-out 0.3s;
+}
+
+div.project-tile:hover {
+    transform: scale(1.2);
+    z-index: 999;
+    transition: ease-in 0.3s;
+}
+
+div.project-tile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.project-tile a {
+    width: 100%;
+    height: 100%;
+}
+
+/* REVIEWS DE CLIENTES */
+section.reviews {
+    background-color: var(--gray);
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.review-tile {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    height: 300px;
+    gap: 10px;
+    font-size: 1.4em;
+    font-weight: 350;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, .1);
+}
+
+.review-tile h3 {
+    font-size: 1.6em;
+    font-weight: 350;
+}
+
+.review-tile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* SERVIÇOS */
+section.services {
+    background-color: white;
+}
+
+.services h2, .professionals h2 {
+    margin-bottom: 5px;
+}
+
+.services > p, .professionals > p {
+    width: 70%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.services .services-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 25px;
+}
+
+.service-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    text-align: center;
+    width: 275px;
+    font-size: 1.4em;
+    font-weight: 350;
+}
+
+.service-tile img {
+    max-width: 45px;
+    width: 100%;
+}
+
+/* PROFISSIONAIS */
+section.professionals {
+    background-color: var(--gray);
+}
+
+.professionals-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.professional-tile {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.5fr 3.5fr;
+    grid-template-columns: 1fr;
+    place-items: flex-start center;
+    max-width: 300px;
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, .1);
+}
+
+section.professionals p {
+    font-size: 2em;
+}
+
+.professional-tile h3.name {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-weight: 350;
+}
+
+.professional-tile p.specialties {
+    font-size: 1.3em;
+}
+
+.professional-tile p.desc {
+    font-size: 1.3em;
+}
+
+.professional-tile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* AREA SOBRE*/
+section.about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 20px;
+    font-size: 1.8em;
+    width: 90%;
+    padding: 10px 25px;
+    font-weight: 345;
+    margin-bottom: 10px;
+}
+
+section.CTA h2 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+section.CTA p {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 350;
+    text-align: center;
+}
+
+@media only screen and (max-width: 680px) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    html {
+        font-size: 54.5%;
+    }
+
+    main div.content h1.title {
+        font-size: 4em;
+    }
+
+    main div.content p.subtitle {
+        font-size: 1.8em;
+
+    }
+}
+
+@media only screen and (max-width: 530px) {
+
+    main div.content h1.title {
+        font-size: 3.4em;
+    }
+
+    main div.content p.subtitle {
+        font-size: 1.4em;
+
+    }
+
+    section.about div {
+        font-size: 1.4em;
+        gap: 1px 20px;
+    }
+
+    section.CTA h2 {
+        font-size: 2.2em;
+    }
+
+    section.CTA p {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+
+    main div.content p.subtitle span {
+        display: none;
+    }
+}
